@@ -1,0 +1,31 @@
+.text-no-break {
+    white-space: nowrap;
+}
+
+.text-normal {
+    font-size: var(--text-normal);
+}
+
+.text-small {
+    font-size: var(--text-small);
+}
+
+.text-unimportant {
+    color: #d1d1d17a;
+}
+
+.text-important {
+    color: #f4edea;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-mono {
+    font-family: 'Consolas', monospace;
+}
+
+.paragraph-spacing {
+    margin: 15px 0;
+}

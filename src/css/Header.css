@@ -1,0 +1,149 @@
+.headnav {
+    background-color: #030e1a;
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
+    padding: 20px;
+}
+
+.headnav img {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.headnav .large-screen-nav {
+    margin-left: auto;
+}
+
+.headnav .large-screen-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.headnav .large-screen-nav ul li {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 50px;
+    margin-right: 50px;
+    position: relative;
+}
+
+.headnav .large-screen-nav ul li a {
+    display:block;
+    z-index: 1000;
+    position: relative;
+    background-color: #030e1a;
+    padding: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #f4edea;
+}
+
+@media (hover: hover) {
+    .headnav .large-screen-nav ul li a:hover {
+        color: #c7bdb9;
+    }
+}
+
+.headnav .large-screen-nav ul li .bottom-left-corner {
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+    width: 25%;
+    height: 50%;
+    border-radius: 5px;
+}
+
+.headnav .large-screen-nav ul li .top-right-corner {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 25%;
+    height: 50%;
+    border-radius: 5px;
+}
+
+.headnav .large-screen-nav ul li .bottom-left-corner.selected, .headnav .large-screen-nav ul li .top-right-corner.selected {
+    background-color: #f4edea;
+    color: #030e1a;
+}
+
+.headnav button {
+    display: none;
+    margin-left: auto;
+    font-size: 2.5rem;
+    color: #f4edea;
+    background-color: #030e1a;
+    border: none; 
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: all 1s ease;
+}
+
+.headnav .small-screen-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    overflow: hidden;
+    height: calc(100vh - 70px);
+    pointer-events: none;
+}
+
+.headnav .small-screen-nav.clickable {
+    pointer-events: auto;
+}
+
+.headnav .small-screen-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+    height: 100%;
+    background-color: #030e1a;
+}
+
+.headnav .small-screen-nav ul.show {
+    transform: translateX(0);
+}
+
+.headnav .small-screen-nav ul li a {
+    text-decoration: none;
+    color: #f4edea;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 10px 50px 10px 20px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.headnav .small-screen-nav ul li a.selected {
+    background-color: #f4edea;
+    color: #12263a;
+}
+
+.headnav .small-screen-nav ul li svg {
+    margin-right: 20px;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 750px) {
+    .headnav .large-screen-nav {
+        display: none;
+    }
+
+    .headnav button, .headnav .small-screen-nav {
+        display: block;
+    }
+}

@@ -1,0 +1,101 @@
+.footnav {
+    background-color: #030e1a;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.glowing-logo {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 20px;
+}
+
+.glowing-logo img {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    display: block;
+    z-index: 100;
+    animation: fade 4s ease infinite;
+}
+
+@keyframes fade {
+    0% { opacity: 0.5; }
+    25% { opacity: 1; }
+    50% { opacity: 0.5; }
+    75% { opacity: 0.5; }
+    77% { opacity: 1; }
+    79% { opacity: 0.5; }
+    83% { opacity: 0.5; }
+    85% { opacity: 1; }
+    87% { opacity: 0.5; }
+    100% { opacity: 0.5; }
+}
+
+.glowing-logo .glow {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    animation: dim 4s ease infinite;
+}
+
+@keyframes dim {
+    0% { -webkit-box-shadow: 0px 0px 50px 0 #06BCC1; 
+        box-shadow: 0px 0px 50px 0 #06BCC1; }
+    25% { -webkit-box-shadow: 0px 0px 50px 25px #06BCC1; 
+        box-shadow: 0px 0px 50px 25px #06BCC1; }
+    50% { -webkit-box-shadow: 0px 0px 50px 0 #06BCC1; 
+        box-shadow: 0px 0px 50px 0 #06BCC1; }
+    75% { -webkit-box-shadow: 0px 0px 50px 0 #06BCC1; 
+        box-shadow: 0px 0px 50px 0 #06BCC1; }
+    77% { -webkit-box-shadow: 0px 0px 50px 25px #06BCC1; 
+        box-shadow: 0px 0px 50px 25px #06BCC1; }
+    79% { -webkit-box-shadow: 0px 0px 50px 0 #06BCC1; 
+        box-shadow: 0px 0px 50px 0 #06BCC1; }
+    83% { -webkit-box-shadow: 0px 0px 50px 0 #06BCC1; 
+        box-shadow: 0px 0px 50px 0 #06BCC1; }
+    85% { -webkit-box-shadow: 0px 0px 50px 25px #06BCC1; 
+        box-shadow: 0px 0px 50px 25px #06BCC1; }
+    87% { -webkit-box-shadow: 0px 0px 50px 0 #06BCC1; 
+        box-shadow: 0px 0px 50px 0 #06BCC1; }
+    100% { -webkit-box-shadow: 0px 0px 50px 0 #06BCC1; 
+        box-shadow: 0px 0px 50px 0 #06BCC1; }
+}
+
+@media only screen and (min-width: 500px) {
+    .footnav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .glowing-logo {
+        margin-bottom: 0;
+        margin-right: 50px;
+    }
+}
+
+.footnav h1 {
+    color: #f4edea;
+    margin-bottom: 15px;
+}
+
+.footnav ul {
+    list-style: none;
+}
+
+.footnav p, .footnav ul li, .footnav ul li a {
+    color: #d1d1d17a;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.footnav ul li svg {
+    margin-right: 20px;
+}
